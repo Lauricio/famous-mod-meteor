@@ -118,7 +118,9 @@ define(function(require, exports, module) {
 
     // prevent scrolling via browser
     window.addEventListener('touchmove', function(event) {
+      if (event.target.parentElement.className.indexOf('js-disableFamous') === -1) {
         event.preventDefault();
+      }
     }, true);
 
     /**
